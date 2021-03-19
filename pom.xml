@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <packaging>pom</packaging>
+    <modules>
+        <module>pawn-blog-common</module>
+        <module>pawn-blog-web</module>
+    </modules>
+    <parent>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-parent</artifactId>
+    <version>2.3.4.RELEASE</version>
+    <relativePath/> <!-- lookup parent from repository -->
+</parent>
+<groupId>com.pawn.blog</groupId>
+<artifactId>pawnblogsystem</artifactId>
+<version>0.0.1-SNAPSHOT</version>
+<name>pawn_blog_system</name>
+<description>Demo project for Spring Boot</description>
+
+    <properties>
+        <java.version>1.8</java.version>
+        <mysql.version>8.0.18</mysql.version>
+        <druid.version>1.1.23</druid.version>
+        <mybatis-plus.version>3.3.1.tmp</mybatis-plus.version>
+        <buession.version>1.1.2</buession.version>
+        <lombok.version>1.18.14</lombok.version>
+        <swagger-ui.version>2.9.2</swagger-ui.version>
+        <bootstrap.version>1.9.1</bootstrap.version>
+        <velocity.version>2.2</velocity.version>
+        <swagger2.version>2.9.2</swagger2.version>
+        <knife4j.version>2.0.7</knife4j.version>
+        <security.version>2.4.1</security.version>
+        <commons.version>3.5</commons.version>
+        <fastjson.version>1.2.45</fastjson.version>
+        <gson.version>2.8.6</gson.version>
+        <jwt.version>1.0.9.RELEASE</jwt.version>
+        <jjwt.version>0.9.0</jjwt.version>
+        <captcha.version>1.6.2</captcha.version>
+        <starter-mail.version>2.3.3.RELEASE</starter-mail.version>
+        <redis.version>5.2.5.RELEASE</redis.version>
+        <springframework.version>2.3.4.RELEASE</springframework.version>
+        <fasterxml.version>2.12.0</fasterxml.version>
+        <bind.version>2.3.0</bind.version>
+        <activation.version>1.1.1</activation.version>
+        <httpclient.version>4.4</httpclient.version>
+        <httpcore.version>4.4</httpcore.version>
+        <aliyun-oss.version>2.8.3</aliyun-oss.version>
+    </properties>
+    <dependencyManagement>
+        <dependencies>
+            <!-- httpclient -->
+            <dependency>
+                <groupId>org.apache.httpcomponents</groupId>
+                <artifactId>httpclient</artifactId>
+                <version>${httpclient.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.httpcomponents</groupId>
+                <artifactId>httpcore</artifactId>
+                <version>${httpcore.version}</version>
+            </dependency>
+            <!-- 阿里对象存储 -->
+            <dependency>
+                <groupId>com.aliyun.oss</groupId>
+                <artifactId>aliyun-sdk-oss</artifactId>
+                <version>${aliyun-oss.version}</version>
+            </dependency>
+            <!-- Java类型转化	-->
+            <dependency>
+                <groupId>javax.xml.bind</groupId>
+                <artifactId>jaxb-api</artifactId>
+                <version>${bind.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.sun.xml.bind</groupId>
+                <artifactId>jaxb-impl</artifactId>
+                <version>${bind.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.sun.xml.bind</groupId>
+                <artifactId>jaxb-core</artifactId>
+                <version>${bind.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>javax.activation</groupId>
+                <artifactId>activation</artifactId>
+                <version>${activation.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-web</artifactId>
+                <version>2.3.4.RELEASE</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.velocity</groupId>
+                <artifactId>velocity-engine-core</artifactId>
+                <version>${velocity.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-test</artifactId>
+                <version>2.3.4.RELEASE</version>
+                <scope>test</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>io.springfox</groupId>
+                <artifactId>springfox-swagger2</artifactId>
+                <version>${swagger2.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.springfox</groupId>
+                <artifactId>springfox-swagger-ui</artifactId>
+                <version>${swagger-ui.version}</version>
+            </dependency>
+            <!-- 引入swagger-bootstrap-ui包 /doc.html 改变接口文档的样式-->
+            <dependency>
+                <groupId>com.github.xiaoymin</groupId>
+                <artifactId>swagger-bootstrap-ui</artifactId>
+                <version>${bootstrap.version}</version>
+            </dependency>
+            <!--在引用时请在maven中央仓库搜索2.X最新版本号-->
+            <dependency>
+                <groupId>com.github.xiaoymin</groupId>
+                <artifactId>knife4j-spring-boot-starter</artifactId>
+                <version>${knife4j.version}</version>
+            </dependency>
+            <!--         druid-->
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>druid</artifactId>
+                <version>${druid.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-data-redis</artifactId>
+                <version>2.3.4.RELEASE</version>
+                <scope>compile</scope>
+            </dependency>
+            <!--            <dependency>-->
+            <!--                <groupId>com.fasterxml.jackson.core</groupId>-->
+            <!--                <artifactId>jackson-databind</artifactId>-->
+            <!--                <version>${fasterxml.version}</version>-->
+            <!--            </dependency>-->
+            <!--            数据库-->
+            <dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+                <version>${mysql.version}</version>
+            </dependency>
+            <!--SpringbootSecurity依赖 -->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-security</artifactId>
+                <version>${security.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.github.whvcse</groupId>
+                <artifactId>easy-captcha</artifactId>
+                <version>${captcha.version}</version>
+            </dependency>
+            <!--mybatisPus-->
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-boot-starter</artifactId>
+                <version>${mybatis-plus.version}</version>
+            </dependency>
+            <!--自动生成代码-->
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-generator</artifactId>
+                <version>${mybatis-plus.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.buession</groupId>
+                <artifactId>buession-velocity</artifactId>
+                <version>${buession.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>${lombok.version}</version>
+                <optional>true</optional>
+            </dependency>
+            <!-- StringUtilS工具 -->
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-lang3</artifactId>
+                <version>${commons.version}</version>
+            </dependency>
+            <!--        javax.mail:邮件发送-->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-mail</artifactId>
+                <version>${starter-mail.version}</version>
+            </dependency>
+            <!-- JSON工具 -->
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>fastjson</artifactId>
+                <version>${fastjson.version}</version>
+            </dependency>
+            <!-- gson工具 -->
+            <dependency>
+                <groupId>com.google.code.gson</groupId>
+                <artifactId>gson</artifactId>
+                <version>${gson.version}</version>
+            </dependency>
+            <!-- JWT依赖 -->
+            <dependency>
+                <groupId>org.springframework.security</groupId>
+                <artifactId>spring-security-jwt</artifactId>
+                <version>${jwt.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.jsonwebtoken</groupId>
+                <artifactId>jjwt</artifactId>
+                <version>${jjwt.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+</project>
