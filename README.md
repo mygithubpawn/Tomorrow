@@ -10,6 +10,8 @@
 -  缓存：Redis
 -  安全框架：SpringSecurity+jwt
 -  对象存储：阿里OSS 
+### 项目数据库 Sql->employee.sql
+- 默认管理员账户：name:admin，password:123
 ### 您需要修改的地方
 - pawn-blog-web->src->main->resources->application-dev.properties
 - 数据库配置
