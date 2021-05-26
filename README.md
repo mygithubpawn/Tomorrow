@@ -21,7 +21,7 @@
 - redis配置
 ![image.png](http://47.99.193.119:8090/upload/2021/03/image-a6323a88454e445bb5a205f60540ae51.png)
 - pawn-blog-common->src->java->com->pawn->blog->utils->OssUtil
-- 修改为自己的oos属性
+- 修改为自己的OSS属性
 ![image.png](http://47.99.193.119:8090/upload/2021/03/image-4d6b258261574fe4a947d8438efb127c.png)
 ### Tomorrow前台项目地址：[Tomorrow前台项目](https://github.com/mygithubpawn/TomorrowWeb)
 #### Tomorrow交流群：722633922
